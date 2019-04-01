@@ -1,0 +1,32 @@
+MongoDB set up log:
+
+rs1_r1: instance on, mongod on 27018, shard&repl set
+rs1_r2: instance on, mongod on 27018,
+rs1_r3: instance on, mongod on 27018,
+
+rs2_r1: instance on, mongod on 27018, shard&repl set
+rs2_r2: instance on, mongod on 27018,
+rs2_r3: instance on, mongod on 27018,
+
+rs3_r1: instance on, mongod on 27018, shard&repl set
+rs3_r2: instance on, mongod on 27018,
+rs3_r3: instance on, mongod on 27018,
+
+config_r1: instance on, mongod on 27019, config&repl set
+config_r2: instance on, mongod on 27019,
+config_r3: instance on, mongod on 27019,
+
+
+mongos: instance on, mongod on 27017
+
+
+Three shards added: rs1, rs2, rs3
+
+Enable sharding for db: "eeg"
+
+Three collections sharded: eeg.eeg_metadata, eeg_features, eeg_tracking
+
+Shard added to zone: rs1-6M, rs2-12M, rs3-24M
+
+Bulk import tested with eeg.test, pass
+Add new file to already sharded collection, it goes to the correct shard, test pass

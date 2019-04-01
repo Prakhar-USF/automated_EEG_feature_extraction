@@ -1,0 +1,11 @@
+config - c5.xlarge - 3 nodes [non-RQA - 20 channels]
+----------------------------------------------------
+real    27m5.050s
+user    0m29.803s
+sys     0m2.227s
+
+config - p2.xlarge - 2 nodes [RQA - 367 channels]
+-------------------------------------------------
+real    6m32.273s
+user    0m28.517s
+sys     0m2.271s

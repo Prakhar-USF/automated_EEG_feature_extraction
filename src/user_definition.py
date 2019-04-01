@@ -1,0 +1,5 @@
+mongos_ip = '54.212.204.248'
+mongos_port = '27017'
+bucket_name = 'msds694-usfcaeeg'
+bucket_prefix = 'Rutgers/'
+db_name = 'test'

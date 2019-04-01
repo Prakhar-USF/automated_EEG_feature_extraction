@@ -1,0 +1,137 @@
+config = {
+          _id : "rs1",
+          members:[{_id:0,host:"172.31.36.149:27018"},
+                   {_id:1,host:"172.31.38.126:27018"},
+                   {_id:2,host:"172.31.32.17:27018"}]
+         }
+
+config = {
+          _id : "rs2",
+          members:[{_id:0,host:"172.31.34.148:27018"},
+                   {_id:1,host:"172.31.35.242:27018"},
+                   {_id:2,host:"172.31.38.176:27018"}]
+         }
+
+config = {
+          _id : "rs3",
+          members:[{_id:0,host:"172.31.38.56:27018"},
+                   {_id:1,host:"172.31.44.187:27018"},
+                   {_id:2,host:"172.31.39.102:27018"}]
+         }
+
+config = {
+          _id : "config",
+          members:[{_id:0,host:"172.31.17.147:27019"},
+                   {_id:1,host:"172.31.17.226:27019"},
+                   {_id:2,host:"172.31.21.14:27019"}]
+         }
+
+
+
+
+
+
+sh.addShard("rs1/172.31.36.149:27018,172.31.38.126:27018,172.31.32.17:27018")
+sh.addShard("rs2/172.31.34.148:27018,172.31.35.242:27018,172.31.38.176:27018")
+sh.addShard("rs3/172.31.38.56:27018,172.31.44.187:27018,172.31.39.102:27018")
+
+
+
+
+
+
+sh.updateZoneKeyRange( 
+    "eeg.eeg_metadata", 
+    { "participant_group" : "06_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "06_month_EEG", "participant_id": MaxKey},
+    "6M" 
+)
+
+sh.updateZoneKeyRange( 
+    "eeg.eeg_metadata", 
+    { "participant_group" : "12_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "12_month_EEG", "participant_id": MaxKey}, 
+    "12M" 
+)
+
+sh.updateZoneKeyRange( 
+    "eeg.eeg_metadata", 
+    { "participant_group" : "24_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "24_month_EEG", "participant_id": MaxKey}, 
+    "24M" 
+)
+
+
+
+
+
+
+sh.updateZoneKeyRange( 
+    "eeg.eeg_features", 
+    { "participant_group" : "06_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "06_month_EEG", "participant_id": MaxKey},
+    "6M" 
+)
+
+sh.updateZoneKeyRange( 
+    "eeg.eeg_features", 
+    { "participant_group" : "12_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "12_month_EEG", "participant_id": MaxKey}, 
+    "12M" 
+)
+
+sh.updateZoneKeyRange( 
+    "eeg.eeg_features", 
+    { "participant_group" : "24_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "24_month_EEG", "participant_id": MaxKey}, 
+    "24M" 
+)
+
+
+
+
+
+
+sh.updateZoneKeyRange( 
+    "eeg.tracking", 
+    { "participant_group" : "06_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "06_month_EEG", "participant_id": MaxKey},
+    "6M" 
+)
+
+sh.updateZoneKeyRange( 
+    "eeg.tracking", 
+    { "participant_group" : "12_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "12_month_EEG", "participant_id": MaxKey}, 
+    "12M" 
+)
+
+sh.updateZoneKeyRange( 
+    "eeg.tracking", 
+    { "participant_group" : "24_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "24_month_EEG", "participant_id": MaxKey}, 
+    "24M" 
+)
+
+
+
+sh.updateZoneKeyRange( 
+    "eeg.eeg_raw", 
+    { "participant_group" : "06_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "06_month_EEG", "participant_id": MaxKey},
+    "6M" 
+)
+
+sh.updateZoneKeyRange( 
+    "eeg.eeg_raw", 
+    { "participant_group" : "12_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "12_month_EEG", "participant_id": MaxKey}, 
+    "12M" 
+)
+
+sh.updateZoneKeyRange( 
+    "eeg.eeg_raw", 
+    { "participant_group" : "24_month_EEG", "participant_id": MinKey},
+    { "participant_group" : "24_month_EEG", "participant_id": MaxKey}, 
+    "24M" 
+)

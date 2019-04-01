@@ -1,0 +1,10 @@
+## Tips  we need an  instance with nvidia graphics card
+
+pip install pyrqa
+pip install pywt
+pip install PyWavelets
+pip install pyedflib
+pip install nolds
+sudo apt-get install python-pyopencl
+python pyrqa_convert.py -Y
+python P3_eeg_drug_on_off.py -o test.csv -meta test_meta.csv
