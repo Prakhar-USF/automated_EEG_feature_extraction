@@ -1,5 +1,5 @@
 # A Scalable Automated Diagnostic Feature Extraction System for EEGs
-A group project by: Gokul Krishna, Xiao Han, Divya bhargavi, Prakhar Agrawal, Neha Tevathia  
+A group project by: Gokul Krishna, Xiao Han, Divya Bhargavi, Prakhar Agrawal, Neha Tevathia  
 <br>
 
 ## Abstract:
